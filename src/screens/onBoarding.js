@@ -1,6 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import PagerView from 'react-native-pager-view';
+import Footer from '../components/Footer';
 
 import Page from '../components/Page';
 
@@ -12,7 +13,36 @@ const Onboarding = () => {
           <Page
             backgroundColor="#ffc93c"
             iconName="friendship.png"
-            title="Welcome to the weather app"
+            title="Welcome to YJ Group"
+          />
+          <Footer
+            backgroundColor="#ffc93c"
+            rightButtonLabel="Next"
+            rightButtonPress={() => true}
+          />
+        </View>
+        <View key="2">
+          <Page
+            backgroundColor="purple"
+            iconName="friendship.png"
+            title="This is Yash"
+          />
+          <Footer
+            backgroundColor="#07689f"
+            rightButtonLabel="Next"
+            rightButtonPress={() => true}
+          />
+        </View>
+        <View key="3">
+          <Page
+            backgroundColor="grey"
+            iconName="friendship.png"
+            title="This is Jahnavi"
+          />
+          <Footer
+            backgroundColor="pink"
+            rightButtonLabel="Next"
+            rightButtonPress={() => true}
           />
         </View>
       </PagerView>

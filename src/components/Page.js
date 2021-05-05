@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 
 const Page = ({backgroundColor, iconName, title}) => {
+  const img = `../assets/images` + {iconName};
   return (
     <View
       style={{
