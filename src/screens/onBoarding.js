@@ -1,14 +1,19 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {View} from 'react-native';
 import PagerView from 'react-native-pager-view';
 import Footer from '../components/Footer';
 
 import Page from '../components/Page';
 
-const Onboarding = () => {
+const Onboarding = ({navigation}) => {
+  const pagerRef = useRef(null);
+
+  const pageHandle = pageNumber => {
+    pagerRef.current.setPage(pageNumber);
+  };
   return (
     <View style={{flex: 1}}>
-      <PagerView style={{flex: 1}}>
+      <PagerView style={{flex: 1}} initialPage={0} ref={pagerRef}>
         <View key="1">
           <Page
             backgroundColor="#ffc93c"
@@ -18,7 +23,7 @@ const Onboarding = () => {
           <Footer
             backgroundColor="#ffc93c"
             rightButtonLabel="Next"
-            rightButtonPress={() => true}
+            rightButtonPress={() => pageHandle(1)}
           />
         </View>
         <View key="2">
@@ -28,9 +33,11 @@ const Onboarding = () => {
             title="This is Yash"
           />
           <Footer
-            backgroundColor="#07689f"
+            backgroundColor="purple"
+            leftButtonLabel="Back"
+            leftButtonPress={() => pageHandle(0)}
             rightButtonLabel="Next"
-            rightButtonPress={() => true}
+            rightButtonPress={() => pageHandle(2)}
           />
         </View>
         <View key="3">
@@ -40,9 +47,11 @@ const Onboarding = () => {
             title="This is Jahnavi"
           />
           <Footer
-            backgroundColor="pink"
+            backgroundColor="grey"
+            leftButtonLabel="Back"
+            leftButtonPress={() => pageHandle(1)}
             rightButtonLabel="Next"
-            rightButtonPress={() => true}
+            rightButtonPress={() => navigation.navigate('Home')}
           />
         </View>
       </PagerView>
@@ -51,28 +60,3 @@ const Onboarding = () => {
 };
 
 export default Onboarding;
-
-// import React from 'react';
-// import {StyleSheet, View, Text} from 'react-native';
-// import PagerView from 'react-native-pager-view';
-
-// const Onboarding = () => {
-//   return (
-//     <PagerView style={styles.pagerView} initialPage={0}>
-//       <View key="1">
-//         <Text>First page</Text>
-//       </View>
-//       <View key="2">
-//         <Text>Second page</Text>
-//       </View>
-//     </PagerView>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   pagerView: {
-//     flex: 1,
-//   },
-// });
-
-// export default Onboarding;
