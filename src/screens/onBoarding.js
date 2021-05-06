@@ -52,7 +52,7 @@ const Onboarding = ({navigation}) => {
             leftButtonLabel="Back"
             leftButtonPress={() => pageHandle(1)}
             rightButtonLabel="Next"
-            rightButtonPress={() => navigation.navigate('Home')}
+            rightButtonPress={() => navigation.navigate('Splash')}
           />
         </View>
       </PagerView>

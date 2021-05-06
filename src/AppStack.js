@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import Onboarding from './screens/onBoarding';
 import Home from './screens/Home/Home.index';
+import Splash from './screens/Splash/Splash.index';
 
 const stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ export default function AppStack() {
         <stack.Navigator headerMode="Onboarding">
           <stack.Screen name="Onboarding" component={Onboarding} />
           <stack.Screen name="Home" component={Home} />
+          <stack.Screen name="Splash" component={Splash} />
         </stack.Navigator>
       </NavigationContainer>
     </>
