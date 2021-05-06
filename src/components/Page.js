@@ -11,10 +11,7 @@ const Page = ({backgroundColor, iconName, title}) => {
         alignItems: 'center',
         backgroundColor,
       }}>
-      <Image
-        style={styles.stretch}
-        source={require('../assets/images/friendship.png')}
-      />
+      <Image style={styles.stretch} source={iconName} />
       <View style={{marginTop: 16}}>
         <Text style={{fontSize: 24, fontWeight: 'bold', color: 'black'}}>
           {title}

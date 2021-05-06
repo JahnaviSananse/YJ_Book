@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import {View} from 'react-native';
 import PagerView from 'react-native-pager-view';
+import {IMAGE} from '../assets/images/images';
 import Footer from '../components/Footer';
 
 import Page from '../components/Page';
@@ -17,7 +18,7 @@ const Onboarding = ({navigation}) => {
         <View key="1">
           <Page
             backgroundColor="#ffc93c"
-            iconName="friendship.png"
+            iconName={IMAGE.FRIENDS}
             title="Welcome to YJ Group"
           />
           <Footer
@@ -29,7 +30,7 @@ const Onboarding = ({navigation}) => {
         <View key="2">
           <Page
             backgroundColor="purple"
-            iconName="friendship.png"
+            iconName={IMAGE.BOY}
             title="This is Yash"
           />
           <Footer
@@ -43,7 +44,7 @@ const Onboarding = ({navigation}) => {
         <View key="3">
           <Page
             backgroundColor="grey"
-            iconName="friendship.png"
+            iconName={IMAGE.GIRL}
             title="This is Jahnavi"
           />
           <Footer
