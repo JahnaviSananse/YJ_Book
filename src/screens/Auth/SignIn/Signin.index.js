@@ -11,8 +11,12 @@ import {
 import styles from '../SignIn/SignIn.style';
 import TextField from '../../../components/TextFied/TextFied.index';
 import {IMAGE} from '../../../assets/images/images';
+import {useAuthHook} from '../../../Hooks/Auth.hooks';
 
 const Signin = ({navigation}) => {
+  const authHook = useAuthHook({email: '', password: ''});
+  console.log('>>>>>>>>>>>>>>>>', authHook);
+
   const renderTabs = () => {
     return (
       <View>
@@ -28,9 +32,19 @@ const Signin = ({navigation}) => {
   const renderSignin = () => {
     return (
       <View>
-        <TextField title={'Email Address'} placeholder={'abc@gmail.com'} />
+        <TextField
+          value={authHook.data.email}
+          change={text => authHook.onChange('email', text)}
+          title={'Email Address'}
+          placeholder={'abc@gmail.com'}
+        />
 
-        <TextField title={'Password'} placeholder={'Enter Here'} />
+        <TextField
+          value={authHook.data.password}
+          change={text => authHook.onChange('password', text)}
+          title={'Password'}
+          placeholder={'Enter Here'}
+        />
 
         <View style={styles.touchableView}>
           <TouchableOpacity
@@ -42,7 +56,7 @@ const Signin = ({navigation}) => {
         </View>
 
         <View style={styles.signinButton}>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <TouchableOpacity onPress={() => authHook.onNext(navigation, 'Home')}>
             <Text style={styles.signinText}> SIGN IN </Text>
           </TouchableOpacity>
         </View>
