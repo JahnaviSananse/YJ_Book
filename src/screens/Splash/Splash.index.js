@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
-import {ActivityIndicator, View, Image} from 'react-native';
+import {ActivityIndicator, View, Image, Text} from 'react-native';
 import styles from './Splash.style';
 import {IMAGE} from '../../assets/images/images';
 const Splash = () => {
@@ -19,8 +19,9 @@ const Splash = () => {
         width: '100%',
         height: '100%',
       }}>
-      <Image style={styles.tinyLogo} source={IMAGE.BUILDING} />
       <ActivityIndicator size="large" color="black" />
+      <Text style={{fontSize: 30, marginBottom: 10}}> Welcome </Text>
+      <Image style={styles.tinyLogo} source={IMAGE.BUILDING} />
     </View>
   );
 };

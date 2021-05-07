@@ -7,7 +7,7 @@ function demoApp() {
   return (
     <>
       <Text> Counts : {data.count} </Text>
-      <Button title="click me" onPress={data.handleIncrement}></Button>
+      <Button title="click me" onPress={data.handleIncrement} />
     </>
   );
 }
