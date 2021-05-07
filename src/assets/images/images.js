@@ -4,4 +4,5 @@ export const IMAGE = {
   FRIENDS: require('../images/friendship.png'),
   COMPUTER: require('../images/computer.png'),
   BUILDING: require('../images/building.png'),
+  VIRGO: require('../images/virgo.png'),
 };

@@ -1,14 +1,13 @@
 import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
-
 import {ActivityIndicator, View, Image, Text} from 'react-native';
 import styles from './Splash.style';
-import {IMAGE} from '../../assets/images/images';
+import {IMAGE} from '../../../assets/images/images';
 const Splash = () => {
   const navigation = useNavigation();
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('SignUp');
     }, 2000);
   }, []);
   return (

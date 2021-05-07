@@ -4,8 +4,10 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Onboarding from './screens/onBoarding';
-import Home from './screens/Home/Home.index';
-import Splash from './screens/Splash/Splash.index';
+import Home from './screens/Auth/Home/Home.index';
+import Splash from './screens/Auth/Splash/Splash.index';
+import Signin from './screens/Auth/SignIn/Signin.index';
+import SignUp from './screens/Auth/SignUp/SignUp.index';
 
 const stack = createStackNavigator();
 
@@ -16,8 +18,10 @@ export default function AppStack() {
       <NavigationContainer>
         <stack.Navigator headerMode="Onboarding">
           <stack.Screen name="Onboarding" component={Onboarding} />
-          <stack.Screen name="Home" component={Home} />
           <stack.Screen name="Splash" component={Splash} />
+          <stack.Screen name="Signin" component={Signin} />
+          <stack.Screen name="SignUp" component={SignUp} />
+          <stack.Screen name="Home" component={Home} />
         </stack.Navigator>
       </NavigationContainer>
     </>
