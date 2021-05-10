@@ -5,4 +5,8 @@ export const IMAGE = {
   COMPUTER: require('../images/computer.png'),
   BUILDING: require('../images/building.png'),
   VIRGO: require('../images/virgo.png'),
+  ALBUM: require('../images/image.png'),
+  HOME: require('../images/home.png'),
+  LOUPE: require('../images/loupe.png'),
+  SETTING: require('../images/settings.png'),
 };

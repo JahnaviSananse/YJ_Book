@@ -4,7 +4,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 import Onboarding from './screens/onBoarding';
-import Home from './screens/Auth/Home/Home.index';
+import Home from './screens/MainTabbar/index';
 import Splash from './screens/Auth/Splash/Splash.index';
 import Signin from './screens/Auth/SignIn/Signin.index';
 import SignUp from './screens/Auth/SignUp/SignUp.index';

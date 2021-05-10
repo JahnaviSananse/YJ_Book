@@ -31,7 +31,7 @@ const Onboarding = ({navigation}) => {
           <Page
             backgroundColor="purple"
             iconName={IMAGE.BOY}
-            title="This is Yash"
+            // title="This is Yash"
           />
           <Footer
             backgroundColor="purple"
@@ -45,7 +45,7 @@ const Onboarding = ({navigation}) => {
           <Page
             backgroundColor="grey"
             iconName={IMAGE.GIRL}
-            title="This is Jahnavi"
+            // title="This is Jahnavi"
           />
           <Footer
             backgroundColor="grey"

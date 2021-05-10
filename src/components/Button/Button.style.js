@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   unfillText: {
     fontWeight: 'bold',
     fontSize: 20,
-    top: 4,
+    // top: 4,
   },
   fillButton: {
     justifyContent: 'center',
@@ -32,15 +32,15 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   unfillButton: {
-    // justifyContent: 'center',
-    // alignSelf: 'center',
+    justifyContent: 'center',
+    alignSelf: 'center',
     borderWidth: 2,
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 5,
     height: 40,
     width: 200,
-    marginTop: 10,
+    marginTop: 20,
     marginBottom: 20,
   },
 });
