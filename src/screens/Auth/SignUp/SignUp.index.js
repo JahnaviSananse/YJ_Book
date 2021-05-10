@@ -58,9 +58,9 @@ const SignUp = () => {
         <View style={styles.touchableView}>
           <TouchableOpacity
             onPress={() => {
-              Alert.alert('Alert', 'Forget Password ?');
+              navigation.navigate('Signin');
             }}>
-            <Text style={styles.forgotPass}> Forgot Password? </Text>
+            <Text style={styles.forgotPass}> Already have an Account ? </Text>
           </TouchableOpacity>
         </View>
 
