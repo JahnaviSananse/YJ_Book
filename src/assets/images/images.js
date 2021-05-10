@@ -14,4 +14,8 @@ export const IMAGE = {
   LION: require('../images/lion.jpg'),
   ELEPHANT: require('../images/elephant.jpg'),
   DOGGIES: require('../images/doggies.jpg'),
+  LIKE: require('../images/like.png'),
+  DISLIKE: require('../images/dislike.png'),
+  LIKEFILL: require('../images/likeFill.png'),
+  DISLIKEFILL: require('../images/dislikeFill.png'),
 };

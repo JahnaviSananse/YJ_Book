@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   SafeAreaView,
   View,
@@ -13,6 +13,8 @@ import {IMAGE} from '../../assets/images/images';
 import RBSheet from 'react-native-raw-bottom-sheet';
 
 const Album = () => {
+  const [like, setLike] = useState(false);
+  const [dislike, setDislike] = useState(false);
   const refRBSheet = useRef();
 
   const DATA = [
@@ -57,7 +59,19 @@ const Album = () => {
       title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
     },
   ];
-
+  const forLike = () => {
+    if (dislike) {
+      setDislike(false);
+    }
+    setLike(!like);
+    // refRBSheet.current.close();
+  };
+  const forDislike = () => {
+    if (like) {
+      setLike(false);
+    }
+    setDislike(!dislike);
+  };
   const renderItem = ({item}) => {
     return (
       <>
@@ -79,11 +93,17 @@ const Album = () => {
             },
           }}>
           <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
-            <TouchableOpacity onPress={() => refRBSheet.current.close()}>
-              <Text style={{fontSize: 30}}> Save </Text>
+            <TouchableOpacity onPress={() => forLike()}>
+              <Image
+                style={styles.hit}
+                source={like ? IMAGE.LIKEFILL : IMAGE.LIKE}
+              />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => refRBSheet.current.close()}>
-              <Text style={{fontSize: 30}}> Delete </Text>
+            <TouchableOpacity onPress={() => forDislike()}>
+              <Image
+                style={styles.hit}
+                source={dislike ? IMAGE.DISLIKEFILL : IMAGE.DISLIKE}
+              />
             </TouchableOpacity>
           </View>
         </RBSheet>
@@ -111,6 +131,10 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 200,
     // resizeMode: 'stretch',
+  },
+  hit: {
+    width: 50,
+    height: 50,
   },
 });
 
