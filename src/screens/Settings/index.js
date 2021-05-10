@@ -5,6 +5,7 @@ import BottomSheet from 'react-native-simple-bottom-sheet';
 
 import styles from './style';
 const Setting = () => {
+  const [on, setOn] = useState(false);
   return (
     <View style={{flex: 1}}>
       <View>
@@ -12,7 +13,7 @@ const Setting = () => {
           <Text style={styles.title}>Your content</Text>
         </TouchableOpacity>
       </View>
-      <BottomSheet isOpen>
+      <BottomSheet isOpen={on}>
         {onScrollEndDrag => (
           <ScrollView onScrollEndDrag={onScrollEndDrag}>
             {[...Array(10)].map((_, index) => (

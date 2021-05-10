@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {
   SafeAreaView,
   View,
@@ -7,10 +7,14 @@ import {
   Text,
   Image,
   StatusBar,
+  TouchableOpacity,
 } from 'react-native';
 import {IMAGE} from '../../assets/images/images';
+import RBSheet from 'react-native-raw-bottom-sheet';
 
 const Album = () => {
+  const refRBSheet = useRef();
+
   const DATA = [
     {
       id: 1,
@@ -57,8 +61,32 @@ const Album = () => {
   const renderItem = ({item}) => {
     return (
       <>
-        <View>{item.title}</View>
+        <TouchableOpacity onPress={() => refRBSheet.current.open()}>
+          <View>{item.title}</View>
+        </TouchableOpacity>
         <View style={{borderBottomWidth: 2, margin: 5}} />
+        <RBSheet
+          ref={refRBSheet}
+          closeOnDragDown={true}
+          closeOnPressMask={false}
+          height={100}
+          customStyles={{
+            wrapper: {
+              backgroundColor: 'transparent',
+            },
+            draggableIcon: {
+              backgroundColor: 'black',
+            },
+          }}>
+          <View style={{flexDirection: 'row', justifyContent: 'space-evenly'}}>
+            <TouchableOpacity onPress={() => refRBSheet.current.close()}>
+              <Text style={{fontSize: 30}}> Save </Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={() => refRBSheet.current.close()}>
+              <Text style={{fontSize: 30}}> Delete </Text>
+            </TouchableOpacity>
+          </View>
+        </RBSheet>
       </>
     );
   };

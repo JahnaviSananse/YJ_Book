@@ -56,7 +56,8 @@ const Signin = ({navigation}) => {
         </View>
 
         <View style={styles.signinButton}>
-          <TouchableOpacity onPress={() => authHook.onNext(navigation, 'Home')}>
+          <TouchableOpacity
+            onPress={() => authHook.onNext(navigation, 'MainTabbar')}>
             <Text style={styles.signinText}> SIGN IN </Text>
           </TouchableOpacity>
         </View>
