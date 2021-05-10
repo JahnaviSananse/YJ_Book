@@ -9,4 +9,9 @@ export const IMAGE = {
   HOME: require('../images/home.png'),
   LOUPE: require('../images/loupe.png'),
   SETTING: require('../images/settings.png'),
+  SQUIRAL: require('../images/squiral.jpg'),
+  NATURE: require('../images/nature.jpg'),
+  LION: require('../images/lion.jpg'),
+  ELEPHANT: require('../images/elephant.jpg'),
+  DOGGIES: require('../images/doggies.jpg'),
 };
