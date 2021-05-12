@@ -16,35 +16,35 @@ export default function Search() {
   const DATA = [
     {
       id: 1,
-      title: <Image style={styles.stretch} source={IMAGE.NATURE} />,
+      title: <Image style={styles.stretch} source={IMAGE.FACEBOOK} />,
     },
     {
       id: 2,
-      title: <Image style={styles.stretch} source={IMAGE.DOGGIES} />,
+      title: <Image style={styles.stretch} source={IMAGE.WHATSAPP} />,
     },
     {
       id: 3,
-      title: <Image style={styles.stretch} source={IMAGE.LION} />,
+      title: <Image style={styles.stretch} source={IMAGE.INSTAGRAM} />,
     },
     {
       id: 4,
-      title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
+      title: <Image style={styles.stretch} source={IMAGE.SNAPCHAT} />,
     },
     {
       id: 5,
-      title: <Image style={styles.stretch} source={IMAGE.SQUIRAL} />,
+      title: <Image style={styles.stretch} source={IMAGE.MUSIC} />,
     },
     {
       id: 6,
-      title: <Image style={styles.stretch} source={IMAGE.LION} />,
+      title: <Image style={styles.stretch} source={IMAGE.TELEGRAM} />,
     },
     {
       id: 7,
-      title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
+      title: <Image style={styles.stretch} source={IMAGE.TWITTER} />,
     },
     {
       id: 8,
-      title: <Image style={styles.stretch} source={IMAGE.SQUIRAL} />,
+      title: <Image style={styles.stretch} source={IMAGE.YOUTUBE} />,
     },
   ];
 
@@ -69,6 +69,7 @@ export default function Search() {
 
       <RBSheet
         ref={refRBSheet}
+        height={230}
         closeOnDragDown={true}
         closeOnPressMask={false}
         customStyles={{
@@ -96,10 +97,11 @@ const styles = StyleSheet.create({
   },
 
   stretch: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    margin: 10,
+    width: 45,
+    height: 45,
+    // borderRadius: 20,
+    margin: 25,
+    marginLeft: 30,
     // resizeMode: 'stretch',
   },
 });

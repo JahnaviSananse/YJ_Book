@@ -15,13 +15,7 @@ const Setting = () => {
       </View>
       <BottomSheet isOpen={on}>
         {onScrollEndDrag => (
-          <ScrollView onScrollEndDrag={onScrollEndDrag}>
-            {[...Array(10)].map((_, index) => (
-              <View key={`${index}`}>
-                <Text style={{fontSize: 32}}>{`List Item ${index + 1}`}</Text>
-              </View>
-            ))}
-          </ScrollView>
+          <ScrollView onScrollEndDrag={onScrollEndDrag}></ScrollView>
         )}
       </BottomSheet>
     </View>

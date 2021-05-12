@@ -18,4 +18,12 @@ export const IMAGE = {
   DISLIKE: require('../images/dislike.png'),
   LIKEFILL: require('../images/likeFill.png'),
   DISLIKEFILL: require('../images/dislikeFill.png'),
+  FACEBOOK: require('../images/facebook.png'),
+  WHATSAPP: require('../images/whatsapp.png'),
+  INSTAGRAM: require('../images/instagram.png'),
+  TWITTER: require('../images/twitter.png'),
+  YOUTUBE: require('../images/youtube.png'),
+  TELEGRAM: require('../images/telegram.png'),
+  SNAPCHAT: require('../images/snapchat.png'),
+  MUSIC: require('../images/music.png'),
 };
