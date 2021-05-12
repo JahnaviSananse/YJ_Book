@@ -8,7 +8,7 @@ const Button = props => {
   let btnStyle =
     type === 'fill'
       ? [styles.fillButton, {backgroundColor: THEME.BLACK}]
-      : [styles.unfillButton, {borderColor: THEME.GREEN}];
+      : [styles.unfillButton, {borderColor: THEME.BLACK}];
   let textStyle =
     type === 'fill'
       ? styles.fillText

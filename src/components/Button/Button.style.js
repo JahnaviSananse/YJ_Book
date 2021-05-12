@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   unfillText: {
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 16,
     // top: 4,
   },
   fillButton: {
@@ -33,14 +33,15 @@ const styles = StyleSheet.create({
   },
   unfillButton: {
     justifyContent: 'center',
-    alignSelf: 'center',
+    // alignSelf: 'center',
     borderWidth: 2,
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 5,
     height: 40,
-    width: 200,
-    marginTop: 20,
+    width: 100,
+    marginTop: 25,
+    marginLeft: 20,
     marginBottom: 20,
   },
 });
