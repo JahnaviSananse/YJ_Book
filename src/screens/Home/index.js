@@ -7,13 +7,16 @@ import {
   Text,
   Image,
   StatusBar,
+  TouchableOpacity,
+  Button,
+  Pressable,
 } from 'react-native';
 import {IMAGE} from '../../assets/images/images';
-import {NavigationContainer} from '@react-navigation/native';
+// import {useNavigation} from '@react-navigation/native';
 
-import DrawerNavigation from '../../BottomTabbar/DrawerNavigation';
+const Home = ({navigation}) => {
+  // const navigation = useNavigation();
 
-const Home = () => {
   const DATA = [
     {
       id: 1,
@@ -37,31 +40,39 @@ const Home = () => {
     },
     {
       id: 6,
-      title: <Image style={styles.stretch} source={IMAGE.NATURE} />,
+      head: 'Click here to go to Natural',
     },
     {
       id: 7,
-      title: <Image style={styles.stretch} source={IMAGE.LION} />,
+      head: 'Click here to go to Squiral',
     },
     {
       id: 8,
-      title: <Image style={styles.stretch} source={IMAGE.SQUIRAL} />,
+      head: 'Click here to go to Doggie',
     },
     {
       id: 9,
-      title: <Image style={styles.stretch} source={IMAGE.DOGGIES} />,
+      head: 'Click here to go to Elephant',
     },
     {
       id: 10,
-      title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
+      head: 'Click here to go to Lion',
     },
   ];
 
   const renderItem = ({item}) => {
     return (
       <>
-        <View>{item.title}</View>
-        <View style={{borderBottomWidth: 2, margin: 5}} />
+        {/* <TouchableOpacity onPress={() => alert(item.id)}> */}
+        <TouchableOpacity onPress={() => navigation.navigate('Photo')}>
+          <View>{item.title}</View>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('TextFile')}>
+          <View>
+            <Text style={{fontSize: 25, fontWeight: 'bold'}}>{item.head}</Text>
+          </View>
+        </TouchableOpacity>
+        <View style={{borderBottomWidth: 2, marginBottom: 10}} />
       </>
     );
   };
