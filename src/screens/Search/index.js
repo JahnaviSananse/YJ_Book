@@ -4,12 +4,59 @@ import {
   Button,
   Text,
   TouchableOpacity,
-  TextComponent,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  FlatList,
 } from 'react-native';
+import {IMAGE} from '../../assets/images/images';
 import RBSheet from 'react-native-raw-bottom-sheet';
 export default function Search() {
   const refRBSheet = useRef();
+  const DATA = [
+    {
+      id: 1,
+      title: <Image style={styles.stretch} source={IMAGE.NATURE} />,
+    },
+    {
+      id: 2,
+      title: <Image style={styles.stretch} source={IMAGE.DOGGIES} />,
+    },
+    {
+      id: 3,
+      title: <Image style={styles.stretch} source={IMAGE.LION} />,
+    },
+    {
+      id: 4,
+      title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
+    },
+    {
+      id: 5,
+      title: <Image style={styles.stretch} source={IMAGE.SQUIRAL} />,
+    },
+    {
+      id: 6,
+      title: <Image style={styles.stretch} source={IMAGE.LION} />,
+    },
+    {
+      id: 7,
+      title: <Image style={styles.stretch} source={IMAGE.ELEPHANT} />,
+    },
+    {
+      id: 8,
+      title: <Image style={styles.stretch} source={IMAGE.SQUIRAL} />,
+    },
+  ];
 
+  const renderItem = ({item}) => {
+    return (
+      <>
+        <TouchableOpacity onPress={() => alert(item.id)}>
+          <View>{item.title}</View>
+        </TouchableOpacity>
+      </>
+    );
+  };
   return (
     <View
       style={{
@@ -18,10 +65,7 @@ export default function Search() {
         alignItems: 'center',
         backgroundColor: '#000',
       }}>
-      <Button
-        title="OPEN BOTTOM SHEET"
-        onPress={() => refRBSheet.current.open()}
-      />
+      <Button title="SHARE WITH" onPress={() => refRBSheet.current.open()} />
 
       <RBSheet
         ref={refRBSheet}
@@ -35,10 +79,27 @@ export default function Search() {
             backgroundColor: '#000',
           },
         }}>
-        <TouchableOpacity onPress={() => refRBSheet.current.close()}>
-          <Text style={{fontSize: 30}}> hi </Text>
-        </TouchableOpacity>
+        <FlatList
+          // horizontal
+          numColumns={4}
+          data={DATA}
+          renderItem={renderItem}
+          keyExtractor={item => item.id}
+        />
       </RBSheet>
     </View>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+
+  stretch: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    margin: 10,
+    // resizeMode: 'stretch',
+  },
+});
