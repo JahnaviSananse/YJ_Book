@@ -6,6 +6,7 @@ import TextField from '../../components/TextFied/TextFied.index';
 import {IMAGE} from '../../assets/images/images';
 import Button from '../../components/Button/Button.index';
 import styles from './style';
+
 const Setting = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const showDatePicker = () => {
