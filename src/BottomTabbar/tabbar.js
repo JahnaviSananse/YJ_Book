@@ -3,7 +3,7 @@ import {StyleSheet, View, Image} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs';
 import {IMAGE} from '../assets/images/images';
-import {TextFile} from '../screens';
+import {SettingScreen} from '../screens/Stacks/SettingScreen';
 import Album from '../screens/Album/index';
 import Home from '../screens/Home/index';
 import Search from '../screens/Search/index';
@@ -42,8 +42,8 @@ const Tabbar = createMaterialBottomTabNavigator({
     },
   },
 
-  Setting: {
-    screen: Setting,
+  SettingScreen: {
+    screen: SettingScreen,
     navigationOptions: {
       tabBarLabel: 'Setting',
       //activeColor: 'black',

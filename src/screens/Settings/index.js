@@ -7,7 +7,7 @@ import {IMAGE} from '../../assets/images/images';
 import Button from '../../components/Button/Button.index';
 import styles from './style';
 
-const Setting = () => {
+const Setting = ({navigation}) => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const showDatePicker = () => {
     setDatePickerVisibility(true);
@@ -41,7 +41,11 @@ const Setting = () => {
           onCancel={hideDatePicker}
         />
       </View>
-      <Button title="CONFIRM" type="fill" />
+      <Button
+        title="CONFIRM"
+        type="fill"
+        onPress={() => navigation.navigate('hookForm')}
+      />
     </>
   );
 };

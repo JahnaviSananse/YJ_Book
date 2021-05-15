@@ -7,4 +7,16 @@ import Search from './Search/index';
 import Settings from './Settings/index';
 import TextFile from './Text/index';
 import Photo from './Photo';
-export {Splash, Signin, SignUp, Home, Album, Search, Settings, TextFile, Photo};
+import hookForm from './hookForm';
+export {
+  Splash,
+  Signin,
+  SignUp,
+  Home,
+  Album,
+  Search,
+  hookForm,
+  Settings,
+  TextFile,
+  Photo,
+};

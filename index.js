@@ -8,4 +8,4 @@ import {name as appName} from './app.json';
 import AppStack from './src/AppStack';
 import MainTabbar from './src/screens/MainTabbar';
 import hookForm from './src/screens/hookForm/index';
-AppRegistry.registerComponent(appName, () => hookForm);
+AppRegistry.registerComponent(appName, () => MainTabbar);
