@@ -8,11 +8,11 @@ import Album from '../screens/Album/index';
 import Home from '../screens/Home/index';
 import Search from '../screens/Search/index';
 import Setting from '../screens/Settings/index';
-import {HomeScreen} from '../screens/Stacks/index';
+import {HomeScreen} from '../screens/Stacks/HomeScreen';
 //import { BottomTabBar } from '@react-navigation/bottom-tabs';
 
 const Tabbar = createMaterialBottomTabNavigator({
-  Home: {
+  HomeScreen: {
     screen: HomeScreen,
     navigationOptions: {
       tabBarLabel: 'Home',

@@ -7,7 +7,7 @@ import {IMAGE} from '../../assets/images/images';
 import Button from '../../components/Button/Button.index';
 import styles from './style';
 
-const Setting = ({navigation}) => {
+const Settings = ({navigation}) => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const showDatePicker = () => {
     setDatePickerVisibility(true);
@@ -50,4 +50,4 @@ const Setting = ({navigation}) => {
   );
 };
 
-export default Setting;
+export default Settings;
