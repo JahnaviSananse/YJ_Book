@@ -70,10 +70,10 @@ export default function hookForm() {
         <Text style={{color: 'red'}}>Minimum 6 characters are required</Text>
       )}
       <Button title="Submit" onPress={handleSubmit(onSubmit)} />
-      {DataItem.map(value => {
+      {DataItem.map((value, index) => {
         return (
           <>
-            <View>
+            <View key={index}>
               <Text> {value?.email}</Text>
               <Text> {value?.password}</Text>
             </View>
