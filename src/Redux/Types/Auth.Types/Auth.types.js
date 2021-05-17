@@ -1,0 +1,4 @@
+export default LOGIN = {
+  LOGIN_START: 'LOGIN_START',
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+};

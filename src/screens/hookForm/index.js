@@ -1,13 +1,23 @@
 import React from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import {useForm, Controller} from 'react-hook-form';
 import {Text, View, TextInput, StyleSheet, Button} from 'react-native';
+import {LoginSuccess} from '../../Redux/Actions/Auth.actions/Auth.actions';
 export default function hookForm() {
+  const dispatch = useDispatch();
   const {
     control,
     handleSubmit,
     formState: {errors},
   } = useForm();
-  const onSubmit = data => console.log('data>>>>>>', data);
+
+  const DataItem = useSelector(state => state.Auth.Data);
+
+  const onSubmit = data => {
+    console.log('data>>>>>>>>', data);
+    dispatch(LoginSuccess(data));
+  };
+
   return (
     <View>
       <Controller
@@ -60,6 +70,21 @@ export default function hookForm() {
         <Text style={{color: 'red'}}>Minimum 6 characters are required</Text>
       )}
       <Button title="Submit" onPress={handleSubmit(onSubmit)} />
+      {DataItem.map(value => {
+        return (
+          <>
+            <View>
+              <Text> {value?.email}</Text>
+              <Text> {value?.password}</Text>
+            </View>
+          </>
+        );
+      })}
+
+      {/* <Text> {DataItem[0]?.email}</Text>
+      <Text> {DataItem[0]?.password}</Text>
+      <Text> {DataItem[1]?.email}</Text>
+      <Text> {DataItem[1]?.password}</Text> */}
     </View>
   );
 }
