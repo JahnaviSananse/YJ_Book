@@ -41,11 +41,18 @@ const Settings = ({navigation}) => {
           onCancel={hideDatePicker}
         />
       </View>
-      <Button
-        title="CONFIRM"
-        type="fill"
-        onPress={() => navigation.navigate('hookForm')}
-      />
+      <View style={{flexDirection: 'row'}}>
+        <Button
+          title="CONFIRM"
+          type="fill"
+          onPress={() => navigation.navigate('hookForm')}
+        />
+        <Button
+          title="DROP-DOWN"
+          type="fill"
+          onPress={() => navigation.navigate('DropDown')}
+        />
+      </View>
     </>
   );
 };

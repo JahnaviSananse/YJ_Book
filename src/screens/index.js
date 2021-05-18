@@ -8,6 +8,7 @@ import Settings from './Settings/index';
 import TextFile from './Text/index';
 import Photo from './Photo';
 import hookForm from './hookForm';
+import DropDown from './DropDown';
 export {
   Splash,
   Signin,
@@ -19,4 +20,5 @@ export {
   Settings,
   TextFile,
   Photo,
+  DropDown,
 };
